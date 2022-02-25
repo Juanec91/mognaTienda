@@ -1,8 +1,9 @@
 import React, {useState, useEffect} from "react";
 
 import './ItemListContainer.css'
-import { Card, Button  } from "react-bootstrap";
+import { Card, Button, Container  } from "react-bootstrap";
 import baseDeDatos from '../ItemList/dataBase.json';
+import {Link} from 'react-router-dom';
 
 
 
@@ -36,13 +37,16 @@ function ItemListContainer()  {
   const db = () =>{
     const products = baseDeDatos;
     return new Promise((res, rej)=>{
-      setTimeout(()=>{res(products)},3000)
+      setTimeout(()=>{res(products)},2000)
     })
   }
 
     return(
       <>
-      <h1>{text}</h1>
+      <Container>
+        <h1>{text}</h1>
+      </Container>
+      
       <container className="containerPro">
   
     
@@ -61,6 +65,10 @@ function ItemListContainer()  {
       <Button onClick={incremetar} className="button-test">+</Button>
       <p>{contador}</p>
       </div>
+      <Link to={`/itemList/${product.id}`}>
+        <Button>Ver mas</Button>
+      </Link>
+     
     </Card>
 
   

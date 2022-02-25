@@ -3,84 +3,84 @@
       {
          "id":1,
          "name":"Riñonera",
-         "img":"../../assets/img/rinoDos.jpg",
+         "img":"https://res.cloudinary.com/dpetbptnw/image/upload/v1645734076/rinoUno_lbwrk3.jpg",
          "price":1000,
          "stock":50
       },
       {
          "id":2,
          "name":"Buff",
-         "img":"../../assets/img/buffDos.jpg",
+         "img":"https://res.cloudinary.com/dpetbptnw/image/upload/v1645734076/cuellitoDos_nvlitc.jpg",
          "price":500,
          "stock":10
       },
       {
          "id":3,
          "name":"Magnesiera",
-         "img":"../../assets/img/magnesierasUno.jpg",
+         "img":"https://res.cloudinary.com/dpetbptnw/image/upload/v1645734079/magnesierasDos_jxnzxs.jpg",
          "price":1200,
          "stock":7
       },
       {
          "id":4,
          "name":"Cuellitos",
-         "img":"../../assets/img/cuellitoDos.jpg",
+         "img":"https://res.cloudinary.com/dpetbptnw/image/upload/v1645734079/cuellitoUno_ksnvfq.jpg",
          "price":400,
          "stock":15
       },
       {
          "id":5,
          "name":"Magnesiera",
-         "img":"../../assets/img/magnesierasDos.jpg",
+         "img":"https://res.cloudinary.com/dpetbptnw/image/upload/v1645734079/magnesierasCinco_ef4zgo.jpg",
          "price":1200,
          "stock":7
       },
       {
          "id":6,
          "name":"Buff",
-         "img":"../../assets/img/buffUno.jpg",
+         "img":"https://res.cloudinary.com/dpetbptnw/image/upload/v1645734075/buffUno_uvf2yk.jpg",
          "price":500,
          "stock":10
       },
       {
      "id":7,
       "name":"Cuellitos",
-      "img":"../../assets/img/cuellitoUno.jpg",
+      "img":"https://res.cloudinary.com/dpetbptnw/image/upload/v1645734076/cuellitoDos_nvlitc.jpg",
       "price":400,
       "stock":15
    },
    {
       "id":8,
       "name":"Riñonera",
-      "img":"../../assets/img/rinoUno.jpg",
+      "img":"https://res.cloudinary.com/dpetbptnw/image/upload/v1645734076/rinoTres_mnkpnj.jpg",
       "price":1000,
       "stock":50
    },
    {
       "id":9,
       "name":"Magnesiera",
-      "img":"../../assets/img/magnesierasTres.jpg",
+      "img":"https://res.cloudinary.com/dpetbptnw/image/upload/v1645734074/magnesierasSeis_l3n2gy.jpg",
       "price":1200,
       "stock":7
    },
    {
       "id":10,
       "name":"Buff",
-      "img":"../../assets/img/buffTres.jpg",
+      "img":"https://res.cloudinary.com/dpetbptnw/image/upload/v1645734075/buffTres_xsc4mc.jpg",
       "price":500,
       "stock":10
    },
    {
       "id":11,
       "name":"Cuellitos",
-      "img":"../../assets/img/cuellitoTres.jpg",
+      "img":"https://res.cloudinary.com/dpetbptnw/image/upload/v1645734078/cuellitoTres_jvrsnv.jpg",
       "price":400,
       "stock":15
    },
    {
       "id":12,
       "name":"Riñonera",
-      "img":"../../assets/img/rinoTres.jpg",
+      "img":"https://res.cloudinary.com/dpetbptnw/image/upload/v1645734075/rinoDos_n6sbfv.jpg",
       "price":1000,
       "stock":50
    }

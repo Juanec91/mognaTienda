@@ -1,9 +1,10 @@
-import React, {useState} from "react";
+import React from "react";
 import './NavBar.css';
 import logo from "../../assets/img/logo.png";
 import cart from "../../assets/img/Cart.png";
 import CartWidget from "../CartWidget/CartWidget";
 import { Container, Nav, Navbar, NavDropdown } from "react-bootstrap";
+import {Link} from 'react-router-dom';
 
 const NavBar = () => {
 
@@ -15,7 +16,7 @@ const NavBar = () => {
 
 <Navbar bg="light" expand="lg">
   <Container>
-    <Navbar.Brand href="#home">
+    <Navbar.Brand href="/">
     <img
           alt=""
           src={logo}
@@ -27,7 +28,7 @@ const NavBar = () => {
     <Navbar.Toggle aria-controls="basic-navbar-nav" />
     <Navbar.Collapse id="basic-navbar-nav">
       <Nav className="me-auto">
-        <Nav.Link href="#home">Productos</Nav.Link>
+        <Link to="/products">Productos</Link>
         <Nav.Link href="#link">Nosotros</Nav.Link>
         <NavDropdown title="Categorías" id="basic-nav-dropdown">
           <NavDropdown.Item href="#action/3.1">Buff</NavDropdown.Item>
