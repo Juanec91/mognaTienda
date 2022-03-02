@@ -4,24 +4,14 @@ import './ItemListContainer.css'
 import { Card, Button, Container  } from "react-bootstrap";
 import baseDeDatos from '../ItemList/dataBase.json';
 import {Link} from 'react-router-dom';
+import { Counter } from "../Counter/Counter";
 
 
 
 function ItemListContainer()  {
   
 
-  const useContador = () =>{
-    const [contador, setContador] = useState(0);
-    const incremetar =() => {
-      setContador(contador +1)
-    }
-    const disminuir =() => {
-      setContador(contador - 1)
-    }
-    return {contador, incremetar, disminuir}
-  }
-
-  const {contador, incremetar, disminuir} = useContador();
+ 
   
   
   const [products, setProducts] = useState([])
@@ -47,7 +37,7 @@ function ItemListContainer()  {
         <h1>{text}</h1>
       </Container>
       
-      <container className="containerPro">
+      <Container className="containerPro">
   
     
        {products?.length === 0 ? <p>Cargando</p> : <>{products.map(product =>(<>
@@ -60,11 +50,7 @@ function ItemListContainer()  {
         {product.price}
       </Card.Text>
     </Card.Body>
-    <div>
-    <Button onClick={disminuir} className="button-test"> -</Button>
-      <Button onClick={incremetar} className="button-test">+</Button>
-      <p>{contador}</p>
-      </div>
+    <Counter></Counter>
       <Link to={`/itemList/${product.id}`}>
         <Button>Ver mas</Button>
       </Link>
@@ -79,7 +65,7 @@ function ItemListContainer()  {
   
 
  
-        </container>
+        </Container>
 
       
         

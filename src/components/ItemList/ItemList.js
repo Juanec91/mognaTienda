@@ -1,36 +1,44 @@
-import {Link} from 'react-router-dom'
-import { Button   } from "react-bootstrap";
-import React, {useState} from 'react';
+import React, {useState, useEffect} from "react";
+import {useParams} from 'react-router-dom'
 import baseDeDatos from './dataBase.json'
-export const ItemList = ({ productProp }) => {
-    const useContador = () =>{
-        const [contador, setContador] = useState(0);
-        const incremetar =() => {
-          setContador(contador +1)
-        }
-        const disminuir =() => {
-          setContador(contador - 1)
-        }
-        return {contador, incremetar, disminuir}
-      }
-      productProp = baseDeDatos
+import { Counter } from '../Counter/Counter';
+import { Button } from "react-bootstrap";
+
+
+
+
+export const ItemList = () => {
     
-      const {contador, incremetar, disminuir} = useContador();
+      const {id} = useParams()
+      const addItem = ()=>{
+        return(
+            <div>
+                <Button onClick={()=> endingBuy(alert("compra exitosa"))}>Finalizar compra</Button>
+            </div>
+        )
+      }
+      const endingBuy = (endingBuy)=>{
+        console.log(endingBuy)
+    }
+
+
+    
+     
             return (
                 <div className="container mt-5" id="product-detail">
                     <div className="row">
                         <div className="col-12 col-md-6 col-lg-4">
-                            <img src={productProp.img} alt="" className="img-fluid" />
+                            <img src={baseDeDatos[id].img} alt="" className="img-fluid" />
                         </div>
                         <div className="col-12 col-md-6 col-lg-8">
                             <div className="product-info">
-                                <h1>{productProp.name}</h1>
-                                <h3>${productProp.price}</h3>
+                                <h1>{baseDeDatos[id].name}</h1>
+                                <h3>${baseDeDatos[id].price}</h3>
                                 <hr />
-                                <p>{productProp.description}</p>
-                                <Button onClick={disminuir} className="button-test"> -</Button>
-      <Button onClick={incremetar} className="button-test">+</Button>
-      <p>{contador}</p>
+                                
+                                <Counter></Counter>
+                                <Button onClick={()=>addItem} >Agregar al carrito</Button>
+                                
                                 
                             </div>
                         </div>
