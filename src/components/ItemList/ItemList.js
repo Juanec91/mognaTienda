@@ -1,8 +1,9 @@
-import React, {useState, useEffect} from "react";
+import React from "react";
 import {useParams} from 'react-router-dom'
 import baseDeDatos from './dataBase.json'
 import { Counter } from '../Counter/Counter';
 import { Button } from "react-bootstrap";
+import { useCartContext } from "../Context/CartContext";
 
 
 
@@ -11,17 +12,13 @@ export const ItemList = () => {
     
       const {id} = useParams()
       const addItem = ()=>{
-        return(
-            <div>
-                <Button onClick={()=> endingBuy(alert("compra exitosa"))}>Finalizar compra</Button>
-            </div>
-        )
+
       }
       const endingBuy = (endingBuy)=>{
         console.log(endingBuy)
     }
 
-
+    const {cartCount, addItems} = useCartContext()
     
      
             return (
@@ -36,9 +33,9 @@ export const ItemList = () => {
                                 <h3>${baseDeDatos[id].price}</h3>
                                 <hr />
                                 
-                                <Counter></Counter>
-                                <Button onClick={()=>addItem} >Agregar al carrito</Button>
-                                
+                                <Counter/>
+                                <Button onClick={()=>addItems(item, Cartcount)} >Agregar al carrito</Button>
+                                <Button onClick={()=> endingBuy(alert("compra exitosa"))}>Finalizar compra</Button>
                                 
                             </div>
                         </div>

@@ -8,6 +8,7 @@ import ItemListContainer from '../src/components/ItemListContainer/ItemListConta
 import 'bootstrap/dist/css/bootstrap.min.css';
 import {BrowserRouter, Routes, Route} from 'react-router-dom';
 import { ItemList } from './components/ItemList/ItemList';
+import {CartProvider} from './components/Context/CartContext'
 
 
 
@@ -19,12 +20,14 @@ function App() {
     
   <BrowserRouter>
      <React.Fragment>
+       <CartProvider>
        <NavBar/>
         <Routes>
         <Route path='/' element={<Home/>}/>
           <Route path='/ItemList/:id' element={<ItemList/>}/>
           <Route path='/products' element={<ItemListContainer/>}/>
         </Routes>
+        </CartProvider>
     </React.Fragment>
     <Footer/>
   </BrowserRouter>

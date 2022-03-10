@@ -1,13 +1,13 @@
-import React from "react";
+import React, { useContext } from "react";
 import './NavBar.css';
 import logo from "../../assets/img/logo.png";
 import cart from "../../assets/img/Cart.png";
 import CartWidget from "../CartWidget/CartWidget";
 import { Container, Nav, Navbar, NavDropdown } from "react-bootstrap";
-import {Link} from 'react-router-dom';
+import {CartContext} from '../Context/CartContext'
 
 const NavBar = () => {
-
+const {cartCount} = useContext(CartContext)
   
   
 
@@ -46,7 +46,7 @@ const NavBar = () => {
           height="45"
           className="d-inline-block align-top"
         />
-    
+      {cartCount}
 
         
         </Navbar.Brand>
